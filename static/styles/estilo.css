@@ -1,0 +1,349 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Parisienne&family=Rubik+Dirt&family=Rubik+Puddles&display=swap');
+
+@font-face {
+    font-family: 'Hacker';
+    src: url('/static/fontes/Hacked CRT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+ @font-face {
+    font-family: 'Bellarina';
+    src: url('fontes/Bellarina.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quentin';
+    src: url('fontes/Quentin.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+
+
+    --corconf: #f1d8bc;
+    --corconf0: #DACCBC;
+    --corconf1: #D5B263;
+    --corconf2: #9F7F55;
+    --corconf3: #4b3923;
+    
+  
+    --font-conf: 'Bungee Spice', cursive;
+    --font-confe: 'Rubik', cursive;
+
+   
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+        
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: var(--fonte1);
+    font-size: 62,5%;
+}
+
+body {
+    background-color: var(--corconf0);
+}
+
+#borda {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    border: 5px;
+    border-color:var(--corconf3);
+    border-radius: 10px;
+    border-style: double;
+    
+}
+header {
+    min-height: 150px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    background-image: linear-gradient(to bottom, var(--corconf0), var(--corconf1));
+ 
+}
+
+header > h1 {
+    color: var(--corconf3);
+    font-size: 5rem;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267)
+}
+
+header > p {
+    font-size: 3rem;
+}
+
+nav {
+    background-image: linear-gradient(to bottom, var(--corconf1), var(--corconf2));
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    text-align: center;  
+}
+
+button {
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s;
+}
+ 
+button:hover {
+    opacity: 1;
+}
+
+
+    
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 4rem;
+}
+
+
+section.normal {
+    color: black;
+   }
+
+section.padrao {
+   box-shadow: inset 6px 6px 13px 0px rgb(0, 0, 0, 0.473);
+   background-size: cover;
+   background-attachment: fixed;
+   
+}
+
+section.padrao > p {
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.267);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#bis {
+    background-image: url(/static/imagens/fundo_cookies.jpg);
+    background-position: right center;
+}
+
+section#pao {
+    background-image: url(/static/imagens/fundo_pao.jpg);
+    background-position: center center;
+}
+
+a {
+    color: var(--corconf3);
+    margin-right: 10px;
+    font-size: 2rem;    
+}
+
+footer {
+    padding: 5px;
+    text-align: center;
+}
+
+
+/*CSS Confeitaria*/
+
+
+
+
+
+
+
+
+
+#modal, #modals {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+  }
+  
+
+#fade, #fades {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+  }
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+.modal-header > h2 {
+    text-align: center;
+}
+
+button#close-contato, #close-sobre {
+  padding: 5px;
+}
+
+#fade, #fades,
+#modal, #modals {
+    position: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.modal-body p {
+   font-size: 2rem;
+   margin: auto;
+   max-width: 500px;
+   text-align: justify;
+    
+}
+
+#nome {
+    font-family: 'Quentin';
+    font-size: 3rem;
+    text-align: right;
+    
+}
+
+#modal.hide, #modals.hides,
+#fade.hide, #fades.hides {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide, #modals.hides {
+    top: 0;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#email {
+    float: left;
+}
+
+
+#what {
+    float: right;
+}
+
+.social img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    box-sizing: border-box;
+}
+.social img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.637);
+    transform: translate(-3px -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.637);
+    transition: transform .5s, border 1s;
+}
+
+.btn-info {
+    font-size: 2rem;
+    background-color: var(--corconf);
+    border-color: var(--corconf3);
+    color: black;
+    border-radius: 15px;
+}
+
+.btn-info:hover, .btn-info:focus {
+    background-color: var(--corconf0);
+    color: black;
+    border-color: var(--corconf3);
+}
+
+
+.btn-primary {
+    font-size: 2rem;
+    background-color: var(--corconf0);
+    border-color: var(--corconf3);
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+}
+
+.btn-primary:hover, .btn-primary:focus, btn {
+    background-color: var(--corconf1);
+    color: black;
+    border-color: var(--corconf3);
+}
+
+
+.carousel-indicators, .modal-header, .carousel-inner {
+    background-color: var(--corconf0);
+}
+
+.carousel-indicators li {
+    background-color: var(--corconf1);
+}
+
+.carousel-indicators .active {
+    background-color: var(--corconf3);
+}
+
+span {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.carousel-inner>.item>img {
+    margin: auto;;
+}
+
+.modal-content {
+    width: 500px;
+    max-width: 95%;
+    margin: auto;
+}
+
