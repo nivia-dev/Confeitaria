@@ -155,12 +155,12 @@ section.padrao > p {
 }
 
 section#bis {
-    background-image: url(/imagens/fundo_cookies.jpg);
+    background-image: url(/static/imagens/fundo_cookies.jpg);
     background-position: right center;
 }
 
 section#pao {
-    background-image: url(imagens/fundo_pao.jpg);
+    background-image: url(/static/imagens/fundo_pao.jpg);
     background-position: center center;
 }
 
