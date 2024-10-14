@@ -27,17 +27,14 @@
 
 :root {
 
-
     --corconf: #f1d8bc;
     --corconf0: #DACCBC;
     --corconf1: #D5B263;
     --corconf2: #9F7F55;
     --corconf3: #4b3923;
-    
-  
+      
     --font-conf: 'Bungee Spice', cursive;
     --font-confe: 'Rubik', cursive;
-
    
 }
 
@@ -155,12 +152,12 @@ section.padrao > p {
 }
 
 section#bis {
-    background-image: url(/static/imagens/fundo_cookies.jpg);
+    background-image: url(../imagens/fundo_cookies.jpg);
     background-position: right center;
 }
 
 section#pao {
-    background-image: url(/static/imagens/fundo_pao.jpg);
+    background-image: url(../imagens/fundo_pao.jpg);
     background-position: center center;
 }
 
@@ -176,15 +173,7 @@ footer {
 }
 
 
-/*CSS Confeitaria*/
-
-
-
-
-
-
-
-
+/*Modal*/
 
 #modal, #modals {
     position: fixed;
